@@ -1,0 +1,12 @@
+<section class="featured-product">
+  <h2 class="featured-products__heading">Feature Products</h2>
+  <div class="featured-products__items">
+    {% for products in collections[section.settings.collection] %}
+    <p>{{ product.title }}</p>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %} { "name": "Hero", "settings": [ { "type": "collection", "id":
+"collection", "label": "Collection" } ], "presets": [ { "category": "Image w/
+text", "name":"Hero" } ] } {% endschema %}
